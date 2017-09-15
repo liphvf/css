@@ -1,36 +1,48 @@
-.wrapper {
-    max-width: 900px;
-    width: 100%;
-    margin: 0px;
+.flex-container {
+  display: flex; /*Define que irá usar flex*/
+  width: 100%; /*Ocupa 100% da tela, pois ele vai servir como base para centralizar a navbar*/
+  justify-content: center; /*Alinha ao centro*/
+  margin: 0px; /*Remove margin por garantia*/
+  padding: 0px; /*Remove padding por garantia*/
+  border-width: 0px; /*Remove borda por garantia*/
 }
 
 .navbar {
-  background: #333;
+  max-width: 900px; /*Define o tamanho máximo para a navbar*/
+  width: 100%; /*Quando o tamanho for menor que 900px, ele ocupará 100% da tela*/
+  margin: 0px; /*Remove margin por garantia*/
+  background: #333; /*Define a cor da navbar*/
 }
 
 .navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style-type: none; /*Isso tira o estilo de lista que são aquelas bolinha que definem cada tópico de uma lista*/
+  margin: 0px; /*Remove margin por garantia*/
+  padding: 0px; /*Remove padding por garantia*/
+}
+
+.navbar li  {
+  text-align: center;
 }
 
 .navbar a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  padding: 5px;
+  text-decoration: none; /*Remove qual quer decoração do elemento existente na âncora. Exemplo: a derecoração que existe um link ou de quando ele é clicado. */
+  color: #fff; /*Define a cor do texto da navbar*/
+  display: block; /*Define que o elemento será de bloco, ou seja sempre começa em uma nova linha e se expande pra esquerda e direita o tanto quanto for possível. */
+  padding: 5px; /*Define o tamanho de cada elemento, com isso as dimensões da barra*/
 }
 
+/* Define o efeito quando o mouse passar por cima */
 .navbar a:hover {
   background-color: #555;
 }
 
+/*Define que quando a janela tiver a largura menor que 768px ele irá aplicar a sequinte css*/
 @media screen and (min-width: 768px){
   
   .navbar ul {
     display: flex;
   }
   .navbar ul li {
-    flex: 1 1 10px ;
+    flex: 1 1 10px ; /* Flex-grow, flex-shrink, flex-basis*/
   }
 }
